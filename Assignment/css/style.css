@@ -1,0 +1,128 @@
+* { margin: 0px; padding: 0px; }
+body {
+	background: #ffffff !important;
+	font:14px "Open Sans", sans-serif; 
+    text-align:center;
+    color: #333333 !important;
+}
+#wrapper{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#contentcontainerArea{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.thumbContainer{
+	width: 100%;
+	background:#fff;
+	border-radius:5px;
+	box-shadow:0px 2px 3px -1px rgba(151, 171, 187, 0.7);
+    float:left;
+    clear:both;
+  	transform-style: preserve-3d;
+  	margin: 10px 5px;
+}
+
+.moviePoster{
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	height: 70%;
+	width: 100%;
+}
+.movieTitle{
+	border-bottom:1px solid #ebeff2;
+	padding:19px 0;
+	text-align:center;
+	color:#59687f;
+	font-size:600;
+	font-size:19px;	
+	position:relative;
+}
+.movieDate{
+	border: 1px solid #ebeff2;
+    border-radius: 5px;
+    padding: 20px 0px;
+    margin: 10px 20px;
+    font-size: 16px;
+    color: #5aadef;
+    font-weight: 600;
+    overflow: auto;
+}
+.banner-image {
+    padding: 5px 5px 0;
+    width: 214px;
+}
+
+#detailPage{
+	background-color: #8d8b8b;
+    pointer-events: auto;
+    height: 760px;
+    top: 0px;
+    z-index: 1;
+}
+#closeBtn{
+	background-image: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: auto;
+    position: absolute;
+    height: 10%;
+    width: 7%;
+	right: 0px;
+	top:0px;
+	z-index: 1;
+}
+
+.tile {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px -1px rgba(151, 171, 187, 0.7);
+    float: left;
+    transform-style: preserve-3d;
+    margin: 10px 5px;
+}
+
+.textDetailHolder{
+    position: relative;
+}
+
+.banner img {
+    width : 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.movie-img img {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 275px;
+    left: 90px
+}
+
+@media only screen and (max-width: 767px) {
+    .movie-img img {
+        position: absolute;
+        width: 170px;
+        height: auto;
+        top: 200px;
+        left: 25px;
+    }
+}
+
+.movie-title{
+    font-size: 35px;
+}
+.movie-release{
+    font-size: 35px;
+}
+.movie-detail{
+    margin-top: 75px;
+    font-size: 25px;
+} 

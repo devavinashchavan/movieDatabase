@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href=css/style.css> <script src="js/jquery-1.9.0.js">
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="js/specific.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="moveiDetails">
+        <div class="container-fluid">
+                                    
+                        <div class="banner row">
+                                <img id="movie-banner" src="images/AFLH8227_SKU_2.jpg" class="img-responsive">
+                        </div>
+                
+     
+                <div class="row bg-primary">
+                        <div class="col-md-offset-3 col-md-6 col-xs-offset-6 col-xs-6 ">
+                                <div class="movie-title ">Movie Name</div>
+                                 <div class="movie-release">Release detailDate  </div>
+                        </div>
+                </div>
+                <div class="row">
+                                <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="movie-detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+                                </div>
+                              
+                        </div>
+        </div>
+        <div class="movie-img">
+                <img id="movie-dp" src='https://image.tmdb.org/t/p/w500/weUSwMdQIa3NaXVzwUoIIcAi85d.jpg'>
+        </div>
+   
+
+        <script>
+                var params = {};
+                var param_array = window.location.href.split('?')[1].split('&');
+                for (var i in param_array) {
+                        x = param_array[i].split('=');
+                        params[x[0]] = x[1];
+                }
+                getID = (params["getid"][0]);
+                var userData = (JSON.parse(window.sessionStorage.getItem('userObject')));
+
+                $(".movie-title").html(userData[getID].title);
+                $(".movie-release").html((userData[getID].releaseDate).split("T")[0]);
+                $("#my_image").attr("src","second.jpg");
+                $("#movie-banner").attr("src","https://image.tmdb.org/t/p/w500" +userData[getID].backdropURL);
+                $("#movie-dp").attr("src","https://image.tmdb.org/t/p/w500" +userData[getID].posterURL);
+                $(".movie-detail").html(userData[getID].plot);
+        </script>
+</body>
+
+</html>
